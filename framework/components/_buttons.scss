@@ -1,0 +1,64 @@
+.button, button{
+  cursor: pointer;
+  font-family: $base-font-family;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  margin: $btn-margin;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding: $btn-padding;
+  font-size: $btn-font-size;
+  background-color: $btn-background;
+  color: $btn-color;
+  @include vendorize(transition, background-color 0.2s ease-out);
+  -webkit-appearance: none;
+  outline: none;
+  border: $btn-border;
+
+
+  &:hover{
+    background-color: darken($btn-background, 10%);
+	color: #ffffff;
+  }
+  
+}
+
+button, .button{
+    &.alert{
+      @extend %alert;
+        &:hover{
+            background-color: darken($alert-background, 10%);
+        }
+    }
+
+    &.success{
+      @extend %success;
+        &:hover{
+            background-color: darken($success-background, 10%);
+        }
+    }
+
+	&.warning{
+      @extend %warning;
+        &:hover{
+            background-color: darken($warning-background, 10%);
+        }
+    }
+
+	&.info{
+      @extend %info;
+        &:hover{
+            background-color: darken($info-background, 10%);
+        }
+    }
+
+    &.alternative{
+      @extend %alternative;
+        color: $alternative-button-color;
+        &:hover{
+            background-color: darken($secondary-color, 10%);
+        }
+    }
+}

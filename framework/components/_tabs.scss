@@ -1,0 +1,36 @@
+.tabs{
+    .tabs-switch{
+        li{
+            display: block;
+            float: left;
+            padding: 10px;
+            background-color: #fefefe;
+            color: #565656;
+            cursor: pointer;
+
+            &.active, &:hover{
+              border-bottom: 2px solid #67b957;
+                color: #67b957;
+                margin-bottom: -2px;
+            }
+        }
+    }
+
+    .tab-panel{
+        
+        padding: 15px;
+        
+        color: #000000;
+        display: none;
+
+        &.active{
+            display: block;
+        }
+    }
+
+    .tabs-panel-hold{
+        background: #fff;
+        clear: both;
+        border-top: 2px solid #dedede;
+    }
+}

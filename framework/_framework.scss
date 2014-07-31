@@ -1,0 +1,35 @@
+@import 'normalize';
+@import 'vars-typeplate';
+@import 'settings';
+@import 'helpers/mixins';
+@import 'components/globals';
+@import 'components/grid';
+@import 'components/typeplate';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/tables';
+@import 'components/alerts';
+@import 'components/dropdown';
+@import 'components/modal';
+@import 'components/tabs';
+@import 'components/accordion';
+
+*, ::after, ::before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;	
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+	font-family: $base-font-family;
+}
+
+a{
+	text-decoration: none;
+}

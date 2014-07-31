@@ -1,0 +1,80 @@
+.vg-dialog-base {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #222;
+    background:rgba(0,0,0,0.9);
+    color: #fff;
+	z-index:999999;
+}
+
+.vg-dialog {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	width: 100%;
+    max-width: 30%;
+    max-height: 25%;
+    margin: auto;
+    background: #ffffff;
+    -webkit-transform: translateY(-100%);
+    -webkit-transition: .3s all ease-in;
+	
+}
+
+.vg-dialog-open .vg-dialog {
+    -webkit-transform: translateY(0%);
+}
+
+.vg-dialog-close{
+	display: block;
+	position:absolute;
+	right: 10px;
+	top: 0px;
+	font-size: 25px;
+	font-weight: bold;
+	color: #ffffff;
+
+}
+.vg-dialog-title{
+	display: block;
+	font-size:20px;
+	color:#ffffff;
+	padding: 10px 25px;
+	background: $brand-color;
+	margin-bottom:0px;
+	font-family: 'arial_rounded_mt_boldbold';
+
+}
+
+
+.vg-dialog-content{
+	padding: 25px;
+	font-size:15px;
+	color: #000000;
+}
+
+.vg-dialog-controls{
+	margin-top:25px;
+
+	
+}
+.vg-save-btn{
+		@extend .button;
+		float: right;
+	}
+	.vg-cancel-btn{
+		@extend .button;
+		background-color: $secondary-color;
+		&:hover{
+			background-color: darken($secondary-color, 10%);
+			color: #000000;
+		}
+		color: #000000;
+		float: left;
+
+	}

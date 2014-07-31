@@ -1,0 +1,31 @@
+.vg-accordion{
+    margin: $accordion-margin;
+
+    .accordion-toggle {
+        display: block;
+        cursor: pointer;
+        margin: 0px !important;
+        padding: $accordion-title-padding;
+        background: $accordion-title-background;
+        color: $accordion-title-color;
+        font-size: $accordion-title-font-size;
+        border: $accordion-title-border;
+        line-height: 120%;
+
+        &:hover{
+             background: $accordion-title-hover-background;
+        }
+
+    }
+    .accordion-content {
+        display: none;
+        padding: $accordion-content-padding;
+        border: $accordion-content-border;
+        background: $accordion-content-background;
+       
+    }
+    .accordion-content.default {
+        display: block;
+    }
+}
+

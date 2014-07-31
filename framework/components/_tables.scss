@@ -1,0 +1,41 @@
+table {
+	width:100%;
+	background: $table-background;
+	margin: $table-margin;
+	border: $table-border;
+
+	tr{
+		td, th{ 
+			padding: 0.5rem 0.55556rem;
+			font-size: 0.8rem;
+			color: #222222;
+		}
+	}
+
+	thead, tfoot{
+		background: $table-head-foot-background;
+
+		tr{
+
+			td{
+				background: $table-cell-background;
+				padding: $table-cell-padding;
+				font-size: $table-cell-font-size;
+				font-weight: $table-cell-font-weight;
+				color: $table-cell-color;
+				text-align: $table-cell-text-align;
+			}
+
+			th{
+				background: $table-header-cell-background;
+				padding: $table-header-cell-padding;
+				font-size: $table-header-cell-font-size;
+				font-weight: $table-header-cell-font-weight;
+				color: $table-header-cell-color;
+				text-align: $table-header-cell-text-align;
+			}
+
+
+		}
+	}
+}

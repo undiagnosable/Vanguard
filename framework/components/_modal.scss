@@ -1,0 +1,144 @@
+.vg-dialog-visible {
+    overflow: hidden;
+}
+
+.vg-dialog-base {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    color: #555;
+    opacity: 0;
+    -webkit-transition: .3s opacity ease-in;
+    -moz-transition: .3s opacity ease-in;
+    -ms-transition: .3s opacity ease-in;
+    -o-transition: .3s opacity ease-in;
+    transition: .3s opacity ease-in;
+}
+
+    .vg-dialog-base.vg-dialog-open {
+        opacity: 1;
+    }
+
+.vg-dialog {
+    position: absolute;
+    top: 95px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 760px;
+    max-height: 85%;
+    margin: auto;
+    background: #67b957;
+    border-radius: 3px;
+    -webkit-transform: translateY(-100%);
+    -webkit-transition: .3s all ease-in;
+}
+
+.vg-dialog-open .vg-dialog {
+    -webkit-transform: translateY(0%);
+}
+
+.vg-dialog-base.vg-dialog-scroll-outer.vg-dialog-open .vg-dialog.vg-dialog-center {
+    -webkit-transform: translateY(-50%);
+    top: 50%;
+    position: absolute;
+    margin: 0 auto;
+}
+
+.vg-dialog-base.vg-dialog-scroll-outer:after {
+    content: "";
+    height: 40px;
+    display: block;
+}
+.vg-dialog-footer {
+    margin: 0 -15px;
+    padding: 15px;
+    border-top: 1px solid #dddddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #e5e5e5;
+    width: 100%;
+    text-align: right;
+}
+.vg-dialog-title {
+    margin: 0;
+    padding: 10px 55px 15px 15px;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+.vg-close {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    padding: 10px 15px;
+    line-height: 32px;
+    color: #fff;
+    font-size:30px;
+}
+
+.vg-dialog-content {
+    padding: 15px;
+}
+.vg-dialog {
+    .editor-label {
+        width: 175px;
+        line-height: 30px;
+    }
+}
+.vg-dialog-scroll-inner .vg-dialog-content {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    overflow: auto;
+    left: 0;
+    right: 1px;
+    -webkit-overflow-scrolling: touch;
+    background: /* Shadow covers */ linear-gradient(white 30%, rgba(255,255,255,0)), linear-gradient(rgba(255,255,255,0), white 70%) 0 100%, /* Shadows */ radial-gradient(50% 0, farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)), radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+    background: /* Shadow covers */ linear-gradient(white 30%, rgba(255,255,255,0)), linear-gradient(rgba(255,255,255,0), white 70%) 0 100%, /* Shadows */ radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.2), rgba(0,0,0,0)), radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+    background-attachment: local, local, scroll, scroll;
+}
+
+.vg-dialog-scroll-inner .vg-dialog {
+    overflow: hidden;
+}
+
+.vg-dialog-scroll-outer .vg-dialog {
+    height: auto;
+    max-height: inherit;
+    bottom: auto;
+    margin: 40px auto 0;
+    position: relative;
+}
+
+
+.vg-dialog-base.vg-dialog-scroll-outer {
+    overflow-y: auto;
+}
+
+//error alert 
+.vg-dialog.is-error {
+color: #b94a48;
+background: #f2dede;
+border-color: #eed3d7;
+}
+.vg-dialog.is-error .vg-content {
+@extend .vg-dialog.is-error;
+}
+//end toss alert 

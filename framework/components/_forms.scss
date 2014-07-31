@@ -1,0 +1,113 @@
+form{
+  margin: $form-margin;
+}
+
+
+label{
+    font-size: $label-font-size;
+    color: $label-color;
+    cursor: pointer;
+    display: block;
+    font-weight: $label-font-weight;
+    margin: $label-margin;
+
+    &.label-right {
+      float: none;
+      text-align: right; 
+    }
+
+    &.inline {
+      padding: $label-inline-padding; 
+    }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  -webkit-appearance: none;
+  @include vendorize(border-radius, $input-border-radius);
+  background-color: $input-background-color;
+  font-family: $base-font-family;
+  border: $input-border;
+  @include vendorize(box-shadow, $input-box-shadow);
+  color: $input-color;
+  display: block;
+  font-size: $input-font-size;
+  margin: $input-margin;
+  padding: $input-padding;
+  height: $input-height;
+  width: 100%;
+  @include vendorize(box-sizing, $input-box-sizing);
+  @include vendorize(box-shadow, $input-transition-box-shadow);
+  @include vendorize(border-color, $input-transition-border-color);
+  outline: none;
+
+
+  &:focus{
+    @include vendorize(box-shadow, $input-focus-box-shadow);
+    border-color: $input-focus-border-color;
+    background: $input-focus-background;
+  }
+
+  &[disabled]{
+    background-color: $input-disabled-background-color;
+  }
+
+}
+
+textarea{
+	height: auto !important;
+	max-width: 100%;
+	min-height: 100px;
+
+}
+
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  margin-left: $check-plus-label-margin;
+  vertical-align: baseline; 
+}
+
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  margin: $file-check-radio-margin;
+}
+
+
+select {
+  -webkit-appearance: none !important;
+	background: $select-background;
+	background-position: 97% center;
+  border: $select-border;
+  padding:$select-padding;
+  font-size: $select-font-size;
+  @include vendorize(border-radius, $select-border-radius);
+  width: 100%;
+  margin-bottom: $select-margin-bottom;
+
+
+  &:hover{
+    background-color: $select-hover-background;
+    border-color: $select-hover-border;
+  }
+
+}
+
+
+input[type="file"] {
+  width: 100%; }

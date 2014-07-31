@@ -1,0 +1,48 @@
+%rounded{
+	 @include vendorize(border-radius, $rounded-corners);
+}
+
+%alert{
+	background-color: $alert-background;
+}
+
+%success{
+	background-color: $success-background;
+}
+
+%warning{
+	background-color: $warning-background;
+}
+
+%info{
+	background-color: $info-background;
+}
+
+%alternative{
+	background-color: $secondary-color;
+}
+
+
+.cf {
+    zoom: 1;
+    &:before, &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+.hide-for-small{
+	@include respond-to(small){
+		display: none !important;
+	}
+}
+
+[class^="col"] img {
+	max-width: 100%;
+}
+
+.clearer{
+	clear: both;
+	float: none;
+}
